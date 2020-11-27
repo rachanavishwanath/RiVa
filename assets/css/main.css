@@ -21,7 +21,9 @@ section, summary, time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  list-style: none;  
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -72,11 +74,14 @@ body {
     min-width: 320px; } }
 
 html {
+  scroll-behavior: smooth;
   box-sizing: border-box; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
-
+span.speciality-image {
+  background-image: url(/images/speciality.png);
+}
 body {
   background: #ffffff; }
   body.is-preload *, body.is-preload *:before, body.is-preload *:after, body.is-resizing *, body.is-resizing *:before, body.is-resizing *:after {
@@ -164,7 +169,13 @@ h6 {
 
 p.dr, h3.dr {
       margin: 0;
-      font-size: 20px;
+      font-size: 18px;
+}
+
+.speciality-logo {
+  height: 10px;
+  width: 10px;
+  margin: 0 1em;
 }
 
 @media screen and (max-width: 1680px) {
@@ -1755,7 +1766,7 @@ button,
     position: relative;
     width: calc(33.33333% - 6em); }
     .posts article:before {
-      background: rgba(210, 215, 217, 0.75);
+      /* background: rgba(210, 215, 217, 0.75); */
       content: '';
       display: block;
       height: calc(100% + 6em);
@@ -2194,6 +2205,15 @@ button,
       max-height: 35vh; } }
 
 /* Footer */
+#footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer > a.back-to-top {
+  height: fit-content;
+}
+
 #footer .copyright {
   color: #9fa3a6;
   font-size: 0.9em; }
