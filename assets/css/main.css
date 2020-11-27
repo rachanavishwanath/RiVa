@@ -178,6 +178,14 @@ p.dr, h3.dr {
   margin: 0 1em;
 }
 
+/* .image-object {
+  background:url('../../images/RiVa_Logo.png');
+  background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  width: 100%;
+  height: 100%;
+} */
+
 @media screen and (max-width: 1680px) {
   h1 {
     font-size: 3.5em; } }
@@ -1235,7 +1243,10 @@ input[type="radio"] + label:before {
   position: relative; }
   .image img {
     border-radius: 0.375em;
-    display: block; }
+    display: block; 
+    /* max-width:100%; */
+    /* object-fit: contain; */
+  }
   .image.left, .image.right {
     max-width: 40%; }
     .image.left img, .image.right img {
@@ -2162,7 +2173,8 @@ button,
       -moz-object-fit: cover;
       -webkit-object-fit: cover;
       -ms-object-fit: cover;
-      object-fit: cover;
+      object-fit: contain;
+      /* object-fit: cover; */
       -moz-object-position: center;
       -webkit-object-position: center;
       -ms-object-position: center;
