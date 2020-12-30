@@ -1240,6 +1240,7 @@ input[type="radio"] + label:before {
   border-radius: 0.375em;
   border: 0;
   background-repeat: no-repeat;
+  box-shadow: 5px 5px 5px 5px #888888;
   display: inline-block;
   position: relative; }
   .image img {
@@ -2139,6 +2140,7 @@ button,
   }
    #header .hamburger-dropdown {
     display: block;
+    border-radius: 20px;
   }
   .hamburger-dropdown  {
     background: url(../../images/hamburger.jpeg);
