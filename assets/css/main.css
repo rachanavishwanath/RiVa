@@ -2108,6 +2108,9 @@ button,
   border-bottom: solid 5px #2a7fba;
   padding: 6em 0 1em 0;
   position: relative; }
+  #header .hamburger-dropdown {
+    display: none;
+  }
   #header > * {
     -moz-flex: 1;
     -webkit-flex: 1;
@@ -2124,6 +2127,57 @@ button,
   @media screen and (max-width: 1680px) {
     #header {
       padding-top: 5em; } }
+   @media all and (max-width: 900px) {
+  .col {
+    /* setting the column width ensures the columns won't collapse on each other */
+    min-width: 550px
+  }
+  #header ul.icons {
+   /* hides the normal nav while the hamburger is on the screen */ 
+    display: none;
+  }
+   #header .hamburger-dropdown {
+    display: block;
+  }
+  .hamburger-dropdown  {
+    background: url(../../images/hamburger.jpeg);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    /* nearest relatively positioned parent of absolute positioned child */
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+  }
+  .hamburger-dropdown ul.iconssss {
+    /* Every time we position an element absolutely we should be thinking about
+    which parent element we need to position relatively */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: black 5px 5px 10px;
+  }
+  ul.iconssss {display: none;}
+
+  /* This is how we create pure css dropdown effects. No JS required. */
+  .hamburger-dropdown:hover ul {
+    display: flex;
+    background: white;
+    z-index: 10;
+    width: 200px;
+  }
+
+  .hamburger-dropdown:hover ul li {
+    padding: 5px;
+  }
+
+  .hamburger-dropdown ul li:hover a {
+    text-decoration: underline;
+  }
+};
   @media screen and (max-width: 736px) {
     #header {
       padding-top: 6.5em; }
