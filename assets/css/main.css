@@ -2176,7 +2176,12 @@ button,
   .hamburger-dropdown:hover ul li {
     padding: 5px;
   }
-
+  .hamburger-dropdown:hover ul li:first-of-type {
+    margin-top: 15px;
+  }
+ .hamburger-dropdown:hover ul li:last-of-type {
+    margin-bottom: 15px;
+  }
   .hamburger-dropdown ul li:hover a {
     text-decoration: underline;
   }
